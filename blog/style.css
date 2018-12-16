@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-color:#000000;
+}
+a{
+    text-decoration: none;
+   
+  }
+  .clearfix{
+    content: '';
+    display: block;
+    clear: both;
+}
+.topNavBar nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.topNavBar nav ul>li{
+    float: left;
+   
+    margin-left: 17px;
+    margin-right: 17px;
+}
+.topNavBar{
+ margin: 38px 10px 20px 18px;
+}
+.topNavBar>nav{
+    padding-top: 3px;
+}
+.topNavBar .logo {
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 25px;
+   
+   
+
+}
+.topNavBar .logo .rs{
+    color: #E8676B;
+    margin-right: 4px;
+    
+    
+}
+.topNavBar .logo .card{
+    color:#9A9DA2;
+}
+.topNavBar a{
+    font-weight: bold;
+   
+}
+.topNavBar nav{
+    font-size: 13px;
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
+}
+.topNavBar nav a{
+    color: rgba(255, 255, 255, 0.7);
+    
+}
+.topNavBar nav ul>li>a{
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.topNavBar nav ul>li>a:hover{
+    border-bottom: 3px solid #DC6465;
+}
+
