@@ -1,10 +1,15 @@
 body {
     margin: 0;
-    background-color:#000000;
+ background-color:#efefefef; 
+    color: #9A9DA2;
 }
 a{
     text-decoration: none;
    
+  }
+  h1,h2,h3,h4,ul,li {
+      margin: 0;
+      padding:0;
   }
   .clearfix{
     content: '';
@@ -23,9 +28,16 @@ a{
     margin-right: 17px;
 }
 .topNavBar{
- margin: 38px 10px 20px 18px;
+ margin: 38px 0px 20px 0px;
+ position:fixed;
+ top:0;
+ left:0;
+ width: 100%;
 }
-.topNavBar>nav{
+.topNavBar-inner{
+    padding: 18px;
+}
+.topNavBar nav{
     padding-top: 3px;
 }
 .topNavBar .logo {
@@ -67,4 +79,56 @@ a{
 .topNavBar nav ul>li>a:hover{
     border-bottom: 3px solid #DC6465;
 }
+.banner{
+    background-image: url(./cover.jpg);
+    height: 516px;
+    background-position: center center;
+    background-size: cover;
+}
+.banner .mask{
+    height: 516px;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+.userCard{
+    border: 1px solid salmon;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+background-color: #fff;
+}
+.userCard .welcome{
+    display: inline-block;
+    background-color: #e8676b;
+    padding: 4px 13px;
+    color: white;
+    line-height: 22px;
+    position: relative;
+}
+/* .userCard  .triangle{
+display: block;
+ border: 10px solid transparent;
+  width: 0px;
+   border-left-color:#e8676b;
+  border-top-width:0;
+  margin-left: 4px;
+} */
+.userCard  .welcome .triangle{
+    display: block;
+ border: 10px solid transparent;
+  width: 0px;
+   border-left-color:#e8676b;
+   /* border-left-color:black; */
+  border-top-width:0;
+  position: absolute;
+  top:100%;
+  left: 4px;
+}
+.userCard .picture{
+    float:left;
+}
+.userCard .text{
+    float:left;
+}
+
 
