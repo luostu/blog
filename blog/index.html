@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loading.css">
-    <title>罗明慧个人简历</title>
+    <title>罗明慧的个人简历</title>
     <script src="//at.alicdn.com/t/font_978916_tzx8rh9ifj.js"></script>
     <style type="text/css">
 
@@ -131,11 +131,7 @@
             <br> 我希望从蓝天到名利
             <br>所有你想要的都别随风而去
             </main>
-
             <section class="skills" id="siteSkill">
-
-            <section class="skills">
-
                 <h2>技能</h2>
                 <ol class="clearfix">
                     <li>
@@ -189,7 +185,9 @@
                     </div>
                 </ol>
             </section>
-          <section class="portfolio" id="siteWork"> 
+
+            <section class="portfolio" id="siteWork"> 
+
             <section class="portfolio"> 
 
                 <h2>作品集</h2>
@@ -210,11 +208,8 @@
                     // setTimeout(function(){
                     //     siteWelcome.classList.remove('active')
                     // },1000)
-                        portfolio1.onclick= function() {
-                             portfolioBar.className='bar state-1'
-                        }
-                        portfolio2.onclick= function(){
-                         
+                        
+                        
 
                         portfolio1.onclick= function(){
                           portfolioBar.className = 'bar state-1'
@@ -249,7 +244,7 @@
             }
 let liTags=document.querySelectorAll('nav.menu>ul>li')
 
-for(let i=0;i<=liTags.length;i++){                          
+for(let i=0;i<liTags.length;i++){                          
     liTags[i].onmouseenter=function(x) {
         x.currentTarget.classList.add('active')
        
