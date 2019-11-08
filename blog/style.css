@@ -28,6 +28,24 @@ a{
     display: block;
     clear: both;
   }
+  [data-x].active{
+    outline: 10px solid red;
+  }
+  [data-x].offset{
+    transform: translateY(80px);
+  }
+  [data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+  }
+  @keyframes slideUp{
+    0%{
+      transform: translateY(-40px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
 .topNavBar nav>ul{
     list-style: none;
     padding: 12px;
@@ -104,7 +122,8 @@ padding:5px 0px;
     padding-top: 5px;
    
 }
-.topNavBar nav ul>li.active>a::after{
+.topNavBar nav ul>li.active>a::after,
+.topNavBar nav ul>li.highlight>a::after{
  /* border-bottom: 3px solid #DC6465; */
  content: "";
  display: block;
