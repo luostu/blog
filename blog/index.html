@@ -240,6 +240,7 @@
             let specialTags = document.querySelectorAll('[data-x]')
             for (let i = 0; i < specialTags.length; i++) {
                 specialTags[i].classList.add('offset')
+                
             }
             findClosest()
             window.onscroll = function (x) {
@@ -267,7 +268,7 @@
                 let id = specialTags[minIndex].id
                 let a = document.querySelector('a[href="#' + id + '"]')
                 let li = a.parentNode
-                console.log(li)
+                //console.log(li)
                 let brothersAndMe = li.parentNode.children
                 for (let i = 0; i < brothersAndMe.length; i++) {
                     brothersAndMe[i].classList.remove('highlight')
