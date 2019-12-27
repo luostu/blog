@@ -5,28 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loading.css">
     <title>罗明慧个人简历</title>
-    <script src="//at.alicdn.com/t/font_978916_tzx8rh9ifj.js"></script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
 
 </head>
 
-
 <body>
-    <div id="siteWelcome" class="site-welcome active">
-        <div class="loading">
-
-        </div>
 
     </div>
     <div id="topNavBar" class="topNavBar clearfix">
@@ -68,7 +54,7 @@
         <div class="mask"></div>
     </div>
     <main data-x id="siteAbout">
-        <div  class="userCard">
+        <div class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./imgofme.jpg" width=299 height=347 alt="头像">
@@ -188,144 +174,64 @@
 
     <section data-x class="portfolio" id="siteWork">
 
-        <section class="portfolio">
+        <section class="portfolio"></section>
 
-            <h2>作品集</h2>
-            <nav>
-                <ol class="clearfix">
-                    <li id="portfolio1">所有</li>
-                    <li id="portfolio2">框架</li>
-                    <li id="portfolio3">原声JS&amp;CSS</li>
-                </ol>
-                <div id="portfolioBar" class="bar state-1">
-                    <div class="bar-inner">
-                    </div>
-                </div>
-            </nav>
-            <script>
-                // setTimeout(function(){
-                //     siteWelcome.classList.remove('active')
-                // },1000)
-
-
-
-                portfolio1.onclick = function () {
-                    portfolioBar.className = 'bar state-1'
-                }
-                portfolio2.onclick = function () {
-
-                    portfolioBar.className = 'bar state-2'
-                }
-                portfolio3.onclick = function () {
-                    portfolioBar.className = 'bar state-3'
-                }
-            </script>
-            <div class="works" style="height: 597px;">
-                <div class="big" style="top:0;left:0;">
-                    <img src="work1.jpg" alt="作品1">
-                </div>
-                <div class="small" style="top:0;left:645px;">
-                    <img src="work2.jpg" alt="作品2">
-                </div>
-                <div class="small" style="top:312px;left:645px;">
-                    <img src="work3.jpg" alt="作品3">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原声JS&amp;CSS</li>
+            </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner">
                 </div>
             </div>
-
-        </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-
+        </nav>
         <script>
-            // 添加 offset 类
-            let specialTags = document.querySelectorAll('[data-x]')
-            for (let i = 0; i < specialTags.length; i++) {
-                specialTags[i].classList.add('offset')
-                
+            portfolio1.onclick = function () {
+                portfolioBar.className = 'bar state-1'
             }
-            findClosest()
-            window.onscroll = function (x) {
-                if (window.scrollY > 0) {
-                    topNavBar.classList.add('sticky')
-                } else {
-                    topNavBar.classList.remove('sticky')
-                }
-                findClosest()
+            portfolio2.onclick = function () {
+
+                portfolioBar.className = 'bar state-2'
             }
-
-            function findClosest() {
-                let specialTags = document.querySelectorAll('[data-x]')
-               
-                let minIndex = 0
-                for (let i = 1; i < specialTags.length; i++) {
-                    if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop -
-                            window.scrollY)) {
-                        minIndex = i
-                    }
-                }
-               
-                // minIndex 就是里窗口顶部最近的元素
-                specialTags[minIndex].classList.remove('offset')
-                let id = specialTags[minIndex].id
-                let a = document.querySelector('a[href="#' + id + '"]')
-                let li = a.parentNode
-                //console.log(li)
-                let brothersAndMe = li.parentNode.children
-                for (let i = 0; i < brothersAndMe.length; i++) {
-                    brothersAndMe[i].classList.remove('highlight')
-                }
-                li.classList.add('highlight')
-            }
-           siteWelcome.classList.remove('active')
-
-            let liTags = document.querySelectorAll('nav.menu>ul>li')
-
-            for (let i = 0; i < liTags.length; i++) {
-                liTags[i].onmouseenter = function (x) {
-                    x.currentTarget.classList.add('active')
-
-                }
-                liTags[i].onmouseleave = function (x) {
-                    x.currentTarget.classList.remove('active')
-                }
-            }
-            let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-
-            function animate(time) {
-                requestAnimationFrame(animate);
-                TWEEN.update(time);
-            }
-            requestAnimationFrame(animate);
-            for (let i = 0; i < aTags.length; i++) {
-                aTags[i].onclick = function (x) {
-                    x.preventDefault()
-                    let a = x.currentTarget
-                    let href = a.getAttribute('href') //'#siteAbout'
-                    let element = document.querySelector(href)
-                    let top = element.offsetTop
-
-                    let currentTop = window.scrollY
-                    let targetTop = top - 80
-                    let s = targetTop - currentTop // 路程
-                    var coords = {
-                        y: currentTop
-                    }; // 起始位置
-                    var t = Math.abs((s / 100) * 2000) // 时间
-                    if (t > 500) {
-                        t = 500
-                    }
-                    var tween = new TWEEN.Tween(coords) // 起始位置
-                        .to({
-                            y: targetTop
-                        }, t) // 结束位置 和 时间
-                        .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
-                        .onUpdate(function () {
-                            // coords.y 已经变了
-                            window.scrollTo(0, coords.y) // 如何更新界面
-                        })
-                        .start(); // 开始缓动
-                }
+            portfolio3.onclick = function () {
+                portfolioBar.className = 'bar state-3'
             }
         </script>
+        <!-- Slider main container -->
+        <div id="myslides">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img class="swiper-slide" src="nav_address.jpg">
+                    <img class="swiper-slide" src="carousel.jpg">
+                    <img class="swiper-slide" src="drawing_board.jpg">
+    
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+    
+    
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+        
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="//at.alicdn.com/t/font_978916_tzx8rh9ifj.js"></script>
+    <script src="swiper.js"></script>
+    <script src="auto-slide-up.js"></script>
+    <script src="stiky-topbar.js"></script>
+    <script src="smoothly-navigetion.js"></script>
 </body>
 
 
