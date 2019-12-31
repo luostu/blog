@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
@@ -223,6 +223,18 @@
         </div>
         
     </section>
+    <section class="message">
+     <h2>留言</h2>
+     <ol id="messageList" class="messageList">
+     </ol>
+     <form id="postMessageForm" style="width: 531px;margin:50px auto">
+    <label for="">姓名</label>
+    <input type="text" name="name">
+    <label for="">内容</label>
+    <input type="text" name="content">
+    <input type="submit" value="提交">
+    </form>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 
 
@@ -232,6 +244,8 @@
     <script src="auto-slide-up.js"></script>
     <script src="stiky-topbar.js"></script>
     <script src="smoothly-navigetion.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js"></script>
+    <script src="message.js"></script>
 </body>
 
 
